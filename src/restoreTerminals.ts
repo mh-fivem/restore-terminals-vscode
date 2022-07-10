@@ -63,10 +63,25 @@ export default async function restoreTerminals(configuration: Configuration) {
         );
       }
     } else {
-      term = vscode.window.createTerminal({
+      let color = "terminal.ansiWhite";
+
+      if (terminalWindow.splitTerminals[0]?.color) {
+        color = terminalWindow.splitTerminals[0].color;
+      }
+
+      let icon = "terminal";
+
+      if (terminalWindow.splitTerminals[0]?.icon) {
+        icon = terminalWindow.splitTerminals[0].icon;
+      }
+
+			const termOpt: vscode.TerminalOptions = {
+				color: new vscode.ThemeColor(color),
+				iconPath: new vscode.ThemeIcon(icon),
         name: name,
-        //  cwd: vscode.window.activeTextEditor?.document.uri.fsPath, //i think this happens by default
-      });
+			};
+
+      term = vscode.window.createTerminal(termOpt);
       term.show();
     }
 

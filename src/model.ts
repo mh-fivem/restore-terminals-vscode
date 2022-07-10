@@ -1,6 +1,8 @@
 export interface TerminalConfig {
   commands?: string[];
   name?: string;
+  icon?: string;
+  color?: string;
   shouldRunCommands?: boolean; //whether to actually run the commands, or just paste them in
 }
 

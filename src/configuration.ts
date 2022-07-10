@@ -57,7 +57,7 @@ async function getConfigurationFromJsonFile(): Promise<
       const fileDataString = new TextDecoder("utf-8").decode(fileData);
       configData = JSON.parse(fileDataString);
     } catch (error) {
-      console.log("No config in workspace", folder, error.Message);
+      console.log("No config in workspace");
     }
   }
   if (!configData) return undefined;
