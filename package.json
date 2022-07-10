@@ -96,7 +96,7 @@
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
     "@types/text-encoding": "^0.0.35",
-    "@types/vscode": "^1.46.0",
+    "@types/vscode": "^1.69.0",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "eslint": "^7.22.0",
@@ -105,8 +105,8 @@
     "glob": "^7.1.6",
     "mocha": "^7.1.2",
     "prettier": "^2.2.1",
-    "typescript": "^3.8.3",
-    "vscode-test": "^1.3.0"
+    "typescript": "^4.7.4",
+    "vscode-test": "^1.6.1"
   },
   "dependencies": {
     "text-encoding": "^0.7.0"
