@@ -12,14 +12,20 @@ Simply configure your VSCode settings JSON file to look something like this:
       "splitTerminals": [
         {
           "name": "server",
+          "color": "terminal.ansiWhite",
+          "icon": "server",
           "commands": ["npm i", "npm run dev"]
         },
         {
           "name": "client",
+          "color": "terminal.ansiBrightGreen",
+          "icon": "vm",
           "commands": ["npm run dev:client"]
         },
         {
           "name": "test",
+          "color": "terminal.ansiWhite",
+          "icon": "bug",
           "commands": ["jest --watch"]
         }
       ]
@@ -29,11 +35,15 @@ Simply configure your VSCode settings JSON file to look something like this:
       "splitTerminals": [
         {
           "name": "build & e2e",
+          "color": "terminal.ansiRed",
+          "icon": "terminal-bash",
           "commands": ["npm run eslint", "npm run build", "npm run e2e"],
           "shouldRunCommands": false
         },
         {
           "name": "worker",
+          "color": "terminal.ansiRed",
+          "icon": "symbol-null",
           "commands": ["npm-run-all --parallel redis tsc-watch-start worker"]
         }
       ]
